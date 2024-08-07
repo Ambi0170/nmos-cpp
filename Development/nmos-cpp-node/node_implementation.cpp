@@ -237,6 +237,10 @@ void node_implementation_thread(nmos::node_model& model, nmos::experimental::con
     }
 }
 
+char* home_sdp() {
+return "a=fmtp:98 sampling=YCbCr-4:2:2; width=1920; height=1080; exactframerate=25; interlace; depth=10; TCS=SDR; RANGE=NARROW; colorimetry=BT709; PM=2110GPM; SSN=ST2110-20:2022; TSMODE=SAMP; TSDELAY=0; TP=2110TPN;";
+};
+
 void node_implementation_init(nmos::node_model& model, nmos::experimental::control_protocol_state& control_protocol_state, slog::base_gate& gate)
 {
     using web::json::value;
